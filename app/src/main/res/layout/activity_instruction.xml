@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue_instruction"
+    tools:context=".ui.getStarted.InstructionActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:gravity="center"
+          android:orientation="vertical"
+                  >
+
+        <ImageView
+            android:id="@+id/img_waves"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/img_waves"
+
+            />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_static_sign_off"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/inter_medium"
+            />
+
+        <TextView
+            android:id="@+id/tvInstruct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_static_sign_off_instruction"
+            android:textColor="@color/inst_text"
+            android:textSize="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/inter_regular"
+            />
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/card_inst_blue"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 android:layout_margin="@dimen/_10sdp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/end_calls_amp_send_texts_instantly_with_a_single_tap"
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="center"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:src="@drawable/img_single_tap"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="@dimen/_60sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    >
+
+                <TextView
+                    android:id="@+id/tvSNo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter_regular"
+                    android:background="@drawable/circle_bg"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvInst1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/effortless_call_end_in_one_tap"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/tvSNo1"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:textSize="@dimen/_10ssp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvSNo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/two"
+                        android:layout_marginVertical="@dimen/_15sdp"
+                        android:layout_below="@id/tvSNo1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/circle_bg"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:paddingVertical="@dimen/_1sdp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvInst2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_your_own_message"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/tvSNo2"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginVertical="@dimen/_15sdp"
+                        android:layout_below="@id/tvSNo1"
+                        android:fontFamily="@font/inter_regular"
+
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvSNo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3"
+                         android:layout_below="@id/tvSNo2"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/circle_bg"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:paddingVertical="@dimen/_1sdp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvInst3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_time_be_professional"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/tvSNo3"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_below="@id/tvSNo2"
+                        android:fontFamily="@font/inter_regular"
+
+
+                        />
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvGetStarted"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:layout_marginBottom="?android:attr/actionBarSize"-->
+<!--                        android:background="@drawable/curved_button_bg"-->
+<!--                        android:backgroundTint="@color/yellow"-->
+<!--                        android:fontFamily="@font/inter_semibold"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingVertical="@dimen/_10sdp"-->
+<!--                        android:text="@string/get_started"-->
+<!--                        android:layout_below="r"-->
+<!--                        android:onClick="getStart"-->
+<!--                        android:textColor="@color/dark_blue"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+
+<!--                        />-->
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/curved_button_bg"
+        android:backgroundTint="@color/yellow"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/continue_"
+        android:onClick="redirectToHome"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/_12ssp"
+
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearMain"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

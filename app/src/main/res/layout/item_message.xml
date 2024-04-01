@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+      android:layout_marginVertical="@dimen/_3sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.view.tab_fragment.CustomMessageFragment">
+
+
+<!--    android:layout_width="@dimen/_12sdp"-->
+<!--    android:layout_height="@dimen/_12sdp"-->
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/img_phone_msg"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvAddNewMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="kkhkjkj jkkj kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkjk"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/imgPhone"
+        app:layout_constraintLeft_toRightOf="@id/imgPhone"
+        app:layout_constraintTop_toTopOf="@id/imgPhone"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

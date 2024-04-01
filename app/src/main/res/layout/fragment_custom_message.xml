@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.core.widget.NestedScrollView -->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@drawable/img_home_bg_without_curve"-->
+<!--   xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    tools:context=".ui.home.view.tab_fragment.CustomMessageFragment">-->
+
+<!--    android:layout_marginBottom="?android:attr/actionBarSize"-->
+
+    <!--    android:background="@drawable/img_home_bg_without_curve"-->
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/img_home_bg_without_curve"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.home.view.tab_fragment.CustomMessageFragment">
+
+
+    <TextView
+        android:id="@+id/tvAddNewMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_message"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="@dimen/_11ssp"
+        android:layout_margin="@dimen/_15sdp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgMsg"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddNewMsg"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:src="@drawable/img_message_box"
+        android:layout_centerVertical="true"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+
+        />
+
+
+    <EditText
+        android:id="@+id/etAddNewMsg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Enter your message"
+        android:maxLength="30"
+        android:textColorHint="@color/last_circle_color"
+        android:text=""
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constrainedWidth="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        app:layout_constraintLeft_toRightOf="@id/imgMsg"
+        app:layout_constraintRight_toLeftOf="@id/tvCount"
+        app:layout_constraintTop_toBottomOf="@id/tvAddNewMsg" />
+
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/30"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/yellow"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tvAddNewMsg" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <TextView
+        android:id="@+id/tvAddCustomMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etAddNewMsg"
+        android:background="@drawable/background_tab_gradient"
+        android:backgroundTint="@color/dark_blue"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:alpha="0.2"
+        android:text="@string/add_custom_message"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/imgMsg"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvRecentMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_messages"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddCustomMessage"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="@dimen/_11ssp"
+        android:layout_margin="@dimen/_15sdp"
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecentMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/tvRecentMsg"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        tools:listitem="@layout/item_message"
+        tools:itemCount="3"
+        />
+    <TextView
+        android:id="@+id/tvAllMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All (89)"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvRecentMsg"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="@dimen/_11ssp"
+        android:layout_margin="@dimen/_15sdp"
+
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAllMsg"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:itemCount="3"
+            tools:listitem="@layout/item_message" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--</androidx.core.widget.NestedScrollView>-->

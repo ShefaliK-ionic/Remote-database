@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_blue">#011C46</color>
+    <color name="yellow">#E0FE10</color>
+    <color name="green">#02FF01</color>
+    <color name="dark_blue_instruction">#001845</color>
+    <color name="card_inst_blue">#192F57</color>
+    <color name="inst_text">#8C97AB</color>
+    <color name="first_circle_color">#2F4769</color>
+    <color name="last_circle_color">#9CA7B5</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="tab_border">#27626C</color>
+    <color name="light_blue">#96CBFF</color>
+    <color name="blue_custom">#1E425B</color>
+    <color name="blue_custom_">#246283</color>
+</resources>

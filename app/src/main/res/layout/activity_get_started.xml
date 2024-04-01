@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_bg_curve"
+    tools:context=".ui.getStarted.GetStartedActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_minus20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/img_waves"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/img_waves"
+
+            />
+
+        <TextView
+            android:id="@+id/tvInstantCallMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/instant_answers_to_all_your_calls_with_static_sign_off"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:id="@+id/tvInstantStatic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/static_sign_off"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:id="@+id/tvInstantCallDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/static_sign_off_your_personal_ai_assistant_for_quick_answers_and_helpful_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <TextView
+            android:id="@+id/tvGetStarted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:background="@drawable/curved_button_bg"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/get_started"
+            android:onClick="getStart"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12ssp"
+
+            />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

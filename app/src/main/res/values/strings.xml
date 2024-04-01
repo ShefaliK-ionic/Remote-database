@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Static Sign Off</string>
+    <string name="instant_answers_to_all_your_calls_with_static_sign_off">Instant answers to all your calls with.</string>
+    <string name="static_sign_off">static sign off</string>
+    <string name="static_sign_off_your_personal_ai_assistant_for_quick_answers_and_helpful_tips">Static sign off - Your Personal AI Assistant for Quick Answers and Helpful Tips!</string>
+    <string name="get_started">Get started!</string>
+    <string name="welcome_to_static_sign_off">Welcome to Static Sign Off</string>
+    <string name="welcome_to_static_sign_off_instruction">Here is instruction to use static sign off,\nplease read it once.</string>
+    <string name="end_calls_amp_send_texts_instantly_with_a_single_tap"><![CDATA[End calls & send texts\ninstantly with a single tap!]]></string>
+    <string name="custom_your_own_message">Custom your own message.</string>
+    <string name="one">1</string>
+    <string name="effortless_call_end_in_one_tap">Effortless call end in one tap.</string>
+    <string name="two">2</string>
+    <string name="continue_">Continue</string>
+    <string name="save_time_be_professional">Save time, be professional</string>
+    <string name="_3">3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connection">Connection</string>
+    <string name="custom_message">Custom message</string>
+    <string name="connected">Connected</string>
+    <string name="message_will_be_sent_after_ending_call">Message will be sent after ending call</string>
+    <string name="add_new_message">add new message</string>
+    <string name="add_custom_message">Add custom message</string>
+    <string name="recent_messages">Recent messages</string>
+</resources>
