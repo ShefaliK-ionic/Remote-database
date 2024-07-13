@@ -10,7 +10,7 @@ import com.staticapp.roomDb.MessageData
 class MessageAdapter(
     var msgList: ArrayList<MessageData>,
     val onItemClick: (Int) -> Unit,
-    val isRecentMsg: Boolean
+    val isRecentMsg: Boolean,val myInterface_:myInterface
 ) :
     RecyclerView.Adapter<MessageAdapter.MsgViewHolder>() {
     class MsgViewHolder(val itemMessageBinding: ItemMessageBinding, val onItemClick: (Int) -> Unit) :
@@ -56,7 +56,16 @@ class MessageAdapter(
         }
 
 
+        holder.itemMessageBinding.tvCancel.setOnClickListener {
+            myInterface_.cancel(holder.adapterPosition)
+        }
 
 
     }
+
+
+}
+
+interface myInterface{
+    fun cancel(pops:Int)
 }

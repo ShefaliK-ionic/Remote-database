@@ -48,6 +48,16 @@ class Repository @Inject constructor(val msgDao: MessageDao) {
      }
 
 
+    fun update(msgData: MessageData)= flow<List<MessageData>> {
+
+        var it=msgDao.update(msgData)
+        Log.d("222","~it~~~"+it)
+
+    }.flowOn(Dispatchers.IO).catch {
+        Log.d("222","~catch msg~~~"+it.message)
+    }
+
+
 
 
 }

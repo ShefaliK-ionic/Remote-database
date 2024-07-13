@@ -19,6 +19,7 @@ import com.staticapp.R
 import com.staticapp.databinding.FragmentCustomMessageFinalBinding
 import com.staticapp.roomDb.MessageData
 import com.staticapp.ui.home.view.adapter.MessageAdapter
+import com.staticapp.ui.home.view.adapter.myInterface
 import com.staticapp.ui.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -29,7 +30,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 @AndroidEntryPoint
-class CustomMessageFragment : Fragment() {
+class CustomMessageFragment : Fragment(), myInterface {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -160,9 +161,9 @@ class CustomMessageFragment : Fragment() {
         msgAllList=ArrayList<MessageData>()
 
 
-        adapter= MessageAdapter(msgList,{ setMsgSelection(it) },true)
+        adapter= MessageAdapter(msgList,{ setMsgSelection(it) },true,this)
 
-        adapterForAll= MessageAdapter(msgAllList, { setMsgSelection(it) }, false)
+        adapterForAll= MessageAdapter(msgAllList, { setMsgSelection(it) }, false,this)
 
         fragmentCustomMessageBinding.rvRecentMsg.layoutManager=LinearLayoutManager(ctx)
         fragmentCustomMessageBinding.rvRecentMsg.adapter=adapter
@@ -178,8 +179,10 @@ class CustomMessageFragment : Fragment() {
     }
 
     private fun setMsgSelection(pos: Int) {
+        var msgData=MessageData(uid=msgList.get(pos).uid,message = fragmentCustomMessageBinding.etAddNewMsg.text.toString(), timestamp = System.currentTimeMillis().toString()/*, isSelected = false*/)
 
-        Log.d("222","~~setMsgSelection~~~"+pos)
+        homeViewModel.updateMessage(msgData)
+        Log.d("222","~~setMsgSelection~updateMessage~~"+msgList.get(pos).message+"~~~"+msgList.get(pos).uid)
 
     }
 
@@ -237,5 +240,12 @@ class CustomMessageFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun cancel(pops: Int) {
+
+
+
+
     }
 }

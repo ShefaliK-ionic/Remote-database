@@ -64,5 +64,24 @@ class HomeViewModel @Inject constructor(val repository: Repository):ViewModel() 
 
     }
 
+    fun updateMessage(messageData: MessageData){
+
+        viewModelScope.launch {
+
+            var longId=repository.update(messageData).catch {
+                Log.d("222", "~~callOnboarding~insertMessage~fail~~" + it.message)
+            }.collect{
+                Log.d("222", "~~callOnboarding~insertMessage~~suc~" + it)
+//                statusInsertMessageFlow.value=it
+            }
+
+            Log.d("222", "~~callOnboarding~insertMessage~~longId~" + longId)
+
+
+        }
+
+
+
+    }
 
 }
